@@ -18,8 +18,6 @@ pip install ilovedevAutobot
 
 ## Contributing
 - [@choipureum](https://github.com/choipureum)
-- [@choisangok](https://github.com/choisangok)
-- [@kmc1210](https://github.com/kmc1210)
 
 ## Reference
 ```
