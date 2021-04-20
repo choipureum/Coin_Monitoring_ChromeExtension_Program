@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Monitoring popup</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="vue.min.js" type="module"></script>
+    <script src="common.js" type="module"></script>
+    <script src="jquery-1.10.2.min.js" type="module"></script>
+
+</head>
+<body class="container">
+    <div id="container">
+        <h4> <img src="icon.png" />&nbsp;Coin Mointoring Program</h4>
+        <h5>key submit</h5>
+        <form>
+            <span>공용 key : <input type="text" id="publicKey" /></span><br />
+            <span>비밀 key : <input type="text" id="secretKey" /></span>
+            <button id="keySubmit">등록</button>
+        </form>
+       
+        <span id="message" hidden></span>
+
+
+    </div>
+    <br />
+    <div id="footer">
+        <p>copyright &copy; 2021 최푸름</p>
+        <a href="https://github.com/choipureum/Coin_Monitoring_ChromeExtension_Program" target="_blank">Git Repository</a>
+    </div>
+</body>
+
+</html>
