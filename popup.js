@@ -6,8 +6,8 @@
 
 
 const meg = document.getElementById("amazing");
-
-
+const keySubmit = document.getElementById("keySubmit");
+const KeySW = false; // api Key 로 로그인 되어 있는지 
 /**
  * 
  * key info chrome.storage
@@ -18,24 +18,42 @@ const meg = document.getElementById("amazing");
 //저장되있는 key 정보 호출
 var publicKey = document.getElementById("publicKey");
 var secretKey = document.getElementById("secretKey");
+getKey();
 
-if (!publicKey.innerText == "" ) {
+
+function getKey() {
+
     chrome.storage.sync.get(['publicKey', 'secretKey'], (result) => {
-        publicKey.text = result.publicKey + "/";
-        secretKey.text = result.secretKey + "/";
+        publicKey.value  = result.publicKey;
+        secretKey.value = result.secretKey;
+
+        if (!publicKey.value == "" || !publicKey.value == null) {
+            console.log(result);
+            setMessage("key load Complete!!");
+            KeySw = true;
+        }
+        else {
+            setMessage("key정보가 존재하지 않습니다. \n 등록해주시기 바랍니다.");
+        }
     });
-}
-else {
-    setMessage("key정보가 존재하지 않습니다. \n 등록해주시기 바랍니다.");
 }
 
 
 //key 저장
-function save(publicKey, secretKey) {
-    chrome.storage.sync.set({ publicKey: publicKey, secretKey: secretKey }, () => {
+function save() {
+    alert("key save!");
+    chrome.storage.sync.set({ "publicKey": publicKey.value, "secretKey": secretKey.value }, () => {
+        console.log(publicKey.value);
+        console.log(secretKey.value);
         setMessage("key save complete!!");
+       
     });
 }
+//// key submit 등록
+
+keySubmit.addEventListener("click", save);
+
+
 //////////////////////////////////////////////////////////////////////////////
 
 /**
@@ -46,7 +64,7 @@ function save(publicKey, secretKey) {
 function setMessage(str) {
     message.textContent = str;
     message.hidden = false;
-    
+
 }
 
 function clearMessage() {
@@ -54,10 +72,10 @@ function clearMessage() {
     message.textContent = "";
 }
 
-meg.addEventListener('click', hello);
+
 
 async function getList() {
-    
+
 
 
 
