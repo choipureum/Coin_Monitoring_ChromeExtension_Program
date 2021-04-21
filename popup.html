@@ -4,7 +4,7 @@
     <title>Monitoring popup</title>
     <link href="style.css" rel="stylesheet" type="text/css">
     <script src="vue.min.js" type="module"></script>
-    <script src="common.js" type="module"></script>
+    <script src="popup.js" type="module"></script>
     <script src="jquery-1.10.2.min.js" type="module"></script>
 
 </head>
@@ -12,18 +12,33 @@
     <div id="container">
         <h4> <img src="icon.png" />&nbsp;Coin Mointoring Program</h4>
         <h5>key submit</h5>
-        <form>
+        <div>
             <span>공용 key : <input type="text" id="publicKey" /></span><br />
             <span>비밀 key : <input type="text" id="secretKey" /></span>
             <button id="keySubmit">등록</button>
-        </form>
-       
+        </div>
+
         <span id="message" hidden></span>
 
+        <h4>##coin regist##</h4>
+        <input type="text"/>
+        <table class="type11">
+            <thead>
+                <tr>
+                    <th scope="cols">ticker</th>
+                    <th scope="cols">price</th>
+                    <th scope="cols">closingPrice</th>
+                    <th scope="cols">percentage</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                
+            </tbody>
+        </table>
 
     </div>
     <br />
-    <div id="footer">
+    <div id="footer" class="form-8bit-wrapper">
         <p>copyright &copy; 2021 최푸름</p>
         <a href="https://github.com/choipureum/Coin_Monitoring_ChromeExtension_Program" target="_blank">Git Repository</a>
     </div>
