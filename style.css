@@ -14,16 +14,44 @@ html {
 body {
     margin: 20px;
     width: 400px;
-    height: 400px;
+    height: 500px;
 }
+
+table.type11 {
+    border-collapse: separate;
+    border-spacing: 1px;
+    text-align: center;
+    line-height: 1.5;
+    margin: 20px 10px;
+}
+
+    table.type11 th {
+        width: 155px;
+        padding: 10px;
+        font-weight: bold;
+        vertical-align: top;
+        color: #fff;
+        background: #777;
+    }
+
+    table.type11 td {
+        width: 155px;
+        font-size :x-small;
+        padding: 10px;
+        vertical-align: top;
+        border-bottom: 1px solid #ccc;
+        background: #eee;
+    }
 /*메인 이미지 아이콘 설정*/
-img{
-    width:20px;
-    height:20px;
+img {
+    width: 20px;
+    height: 20px;
 }
-#message{
-    color:darkred;
+
+#message {
+    color: darkred;
 }
+
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
     display: block
 }
