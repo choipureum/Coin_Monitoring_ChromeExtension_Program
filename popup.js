@@ -159,6 +159,7 @@ var KRW_coin = [
 ];
   
 getList("");
+
 function getList(myCoin) {
     //Get Coin
     //var KRW_coin = MarketCoinList();
