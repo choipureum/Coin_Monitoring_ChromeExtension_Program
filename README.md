@@ -32,6 +32,7 @@ using pybithumb;
   - 보안 취약점 등의 민감한 이슈인 경우 poo1994.imbc.com 로 연락주십시오. 
 
 ## Release
+### v1.0.2 
 ![image](https://user-images.githubusercontent.com/55127127/115638123-b71e7280-a34c-11eb-801c-22a2e037d25c.png)
-v1.0.2 
+
 
